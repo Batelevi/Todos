@@ -19,13 +19,13 @@ public class TodoController : ControllerBase
 
             using (var conn = new SqlConnection(connectionString))
             {
-                var query = "SELECT Id, Title, Description, Status, AssignedUser, CreatedAt FROM Todos";
+                var query = "SELECT * FROM Todos";
 
                 await conn.OpenAsync();
 
-                using (SqlCommand command = new SqlCommand(query, conn))
+                using (var command = new SqlCommand(query, conn))
                 {
-                    using (SqlDataReader reader = await command.ExecuteReaderAsync())
+                    using (var reader = await command.ExecuteReaderAsync())
                     {
                         while (await reader.ReadAsync())
                         {
@@ -305,8 +305,7 @@ public class TodoController : ControllerBase
             using (var conn = new SqlConnection(connectionString))
             {
 
-                var query = "SELECT Id, TodoId, Date, ChangeType, ChangedBy, Details " +
-                            "FROM History WHERE TodoId = @TodoId";
+                var query = "SELECT * FROM History WHERE TodoId = @TodoId";
 
                 await conn.OpenAsync();
 
