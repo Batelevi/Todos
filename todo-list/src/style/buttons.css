@@ -1,0 +1,66 @@
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-left: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+    button:hover {
+        background-color: #45a049;
+        transform: translateY(-2px);
+    }
+
+.modal button,
+.todo-details-modal button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+    .modal button:hover,
+    .todo-details-modal button:hover {
+        background-color: #0056b3;
+    }
+
+button.save-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+    button.save-btn:hover {
+        background-color: #218838;
+    }
+
+button.cancel-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+    button.cancel-btn:hover {
+        background-color: #c82333;
+    }
+
+button.add-btn {
+    background-color: #17a2b8;
+    color: white;
+    margin-left: 25px;
+}
+
+    button.add-btn:hover {
+        background-color: #138496;
+    }
+
+button {
+    width: auto;
+    max-width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
